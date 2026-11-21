@@ -52,3 +52,12 @@ dependencies {
     implementation 'net.java.dev.jna:jna:5.13.0@aar'
     implementation 'com.alphacephei:vosk-android:0.3.47'
 }
+
+configurations.configureEach {
+    resolutionStrategy.eachDependency {
+        if (requested.group == 'org.jetbrains.kotlin' && requested.name.startsWith('kotlin-stdlib')) {
+            useVersion '1.8.22'
+            because 'Keep Kotlin standard-library modules on one compatible version to avoid duplicate classes'
+        }
+    }
+}
