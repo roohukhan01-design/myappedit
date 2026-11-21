@@ -36,6 +36,7 @@ jobs:
           cp Roohu-ClipForge.html app/src/main/assets/Roohu-ClipForge.html
           cp ./*.java app/src/main/java/com/roohu/clipforge/
           cp validate.js shared/core/validate.js
+          cp validate.js app/src/main/assets/validate.js
           cp validate.test.js projects.test.js subtitles.test.js shared/test/
           test -s app/src/main/assets/Roohu-ClipForge.html
           test -s app/src/main/java/com/roohu/clipforge/MainActivity.java
